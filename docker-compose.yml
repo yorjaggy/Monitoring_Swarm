@@ -1,10 +1,10 @@
 version: '3.2'
 
-networks:
-  frontend:
-    external:
-      name: imixs-proxy-net 
-  backend: 
+# networks:
+#   frontend:
+#     external:
+#       name: imixs-proxy-net 
+#   backend: 
   
 
 services:
@@ -28,7 +28,7 @@ services:
         #traefik.docker.network: "imixs-proxy-net" 
       placement:
         constraints:
-          - node.role == node1
+          - node.role == manager
     networks:
       - frontend
       - backend     
